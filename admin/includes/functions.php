@@ -22,6 +22,8 @@ spl_autoload_register(function ($class) {
 
 });
 
-
+function redirect($location){
+    header("Location: {$location}");
+}
 
 ?>

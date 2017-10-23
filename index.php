@@ -1,4 +1,7 @@
-<?php include("includes/header.php"); ?>
+<?php include("admin/includes/header.php"); ?>
+<?php if(!$session->is_signed_in()){
+    redirect("admin/login.php");
+}?>
 
 
         <div class="row">

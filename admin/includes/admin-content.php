@@ -1,40 +1,19 @@
 <div class="container-fluid">
+    <?php if($session->is_signed_in()){
+    $signed_in_user_id=$session->user_id;
+    $signed_in_user=User::find_user_by_id($signed_in_user_id);
+}
 
+    ?>
     <!-- Page Heading -->
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">
                 Blank Page
-                <small>Subheading</small>
+                <small><?php echo $signed_in_user->username?></small>
             </h1>
 
-            <?php
 
-//            $result_set=User::find_all_users();
-//            while($row = mysqli_fetch_array($result_set)){
-//                echo $row['user_username'] . "</br>";
-//            }
-
-
-
-//            $found_user=User::find_user_by_id(1);
-//            $user = User::instantiation($found_user);
-//
-//
-//            echo $user->username;
-
-//            $users = User::find_all_users();
-//            foreach ($users as $property){
-//                echo $property->username;
-//
-//            }
-
-            $found_user=User::find_user_by_id(1);
-            echo $found_user->last_name;
-
-            $hi=new Session();
-
-            ?>
 
 
             <ol class="breadcrumb">

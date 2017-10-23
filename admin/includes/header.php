@@ -1,4 +1,11 @@
-<?php include "init.php";?>
+<?php include("init.php");?>
+<?php
+
+//if (!$session->is_signed_in()){
+//    redirect("../index.php");
+//}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 

@@ -40,12 +40,6 @@ class User{
     public static function instantiation($the_record){
         $the_object=new self;
 
-//        $the_object->id         = $found_user['id'];
-//        $the_object->username   = $found_user['username'];
-//        $the_object->password   = $found_user['password'];
-//        $the_object->firstname  = $found_user['firstname'];
-//        $the_object->lastname   = $found_user['lastname'];
-
         foreach($the_record as $the_attribute => $value){
             if($the_object->has_the_attribute($the_attribute)){
                 $the_object->$the_attribute = $value;
@@ -57,6 +51,18 @@ class User{
 
     private function has_the_attribute($the_attribute){
         return property_exists($this, $the_attribute);
+    }
+
+    public static function verify_user($username,$password){
+        global $database;
+        $username=$database->escape_string($username);
+        $password=$database->escape_string($password);
+
+        $query= "SELECT * FROM users WHERE username = '{$username}' AND password = '{$password}'  LIMIT 1";
+
+        $the_result_array=self::find_this_query($query);
+        return !empty($the_result_array) ? array_shift($the_result_array) : false;
+
     }
 
 }
