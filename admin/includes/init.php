@@ -5,4 +5,5 @@
 <?php require_once("database.php");?>
 <?php require_once("db_object.php");?>
 <?php require_once("user.php");?>
+<?php require_once("photo.php");?>
 

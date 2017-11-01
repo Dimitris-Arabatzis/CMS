@@ -11,7 +11,7 @@
 //    $usher->save();
 
 //    $usher = new User();
-//    $usher->username = "Student";
+//    $usher->username = "NEW USERS";
 //    $usher->password = "123";
 //    $usher->first_name = "Estudiante";
 //    $usher->last_name = "Comemos";
@@ -21,13 +21,23 @@
 //    $usher->first_name="CHAAAOOOs";
 //    $usher->update();
 
-    $users =User::find_all();
+//    $users =User::find_all();
+//    foreach($users as $user){
+//        echo $user->username;
+//    }
 
-    foreach($users as $user){
-        echo $user->username;
-    }
+//    $photos =Photo::find_all();
+//    foreach($photos as $photo){
+//        echo $photo->title;
+//    }
 
-
+    $photo = new Photo();
+    $photo->title = "mommyy";
+    $photo->description = "some test";
+    $photo->filename = "some test";
+    $photo->type = "image";
+    $photo->size = 11;
+    $photo->create();
 
     ?>
     <!-- Page Heading -->
