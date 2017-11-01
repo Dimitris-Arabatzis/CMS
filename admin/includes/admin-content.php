@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <?php if($session->is_signed_in()){
     $signed_in_user_id=$session->user_id;
-    $signed_in_user=User::find_user_by_id($signed_in_user_id);
+    $signed_in_user=User::find_by_id($signed_in_user_id);
 }
 
 
@@ -17,10 +17,15 @@
 //    $usher->last_name = "Comemos";
 //    $usher->create();
 
-    $usher = User::find_user_by_id(22);
-    $usher->first_name="CHAAAOOOs";
-    $usher->update();
+//    $usher = User::find_user_by_id(22);
+//    $usher->first_name="CHAAAOOOs";
+//    $usher->update();
 
+    $users =User::find_all();
+
+    foreach($users as $user){
+        echo $user->username;
+    }
 
 
 
