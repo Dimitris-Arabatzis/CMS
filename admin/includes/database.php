@@ -34,8 +34,12 @@ class Database{
         return $this->connection->real_escape_string($string);
     }
 
-    public function the_insert_id(){
+    public function the_insert_id_old(){
         return $this->connection->insert_id;
+    }
+
+    public function the_insert_id(){
+        return mysqli_insert_id($this->connection);
     }
 
 }

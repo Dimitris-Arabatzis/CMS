@@ -4,6 +4,26 @@
     $signed_in_user=User::find_user_by_id($signed_in_user_id);
 }
 
+
+
+//    $usher = User::find_user_by_id(20);
+//    $usher->password=123;
+//    $usher->save();
+
+//    $usher = new User();
+//    $usher->username = "Student";
+//    $usher->password = "123";
+//    $usher->first_name = "Estudiante";
+//    $usher->last_name = "Comemos";
+//    $usher->create();
+
+    $usher = User::find_user_by_id(22);
+    $usher->first_name="CHAAAOOOs";
+    $usher->update();
+
+
+
+
     ?>
     <!-- Page Heading -->
     <div class="row">
