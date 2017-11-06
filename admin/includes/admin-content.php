@@ -31,13 +31,16 @@
 //        echo $photo->title;
 //    }
 
-    $photo = new Photo();
-    $photo->title = "mommyy";
-    $photo->description = "some test";
-    $photo->filename = "some test";
-    $photo->type = "image";
-    $photo->size = 11;
-    $photo->create();
+//    $photo = new Photo();
+//    $photo->title = "mommyy";
+//    $photo->description = "some test";
+//    $photo->filename = "some test";
+//    $photo->type = "image";
+//    $photo->size = 11;
+//    $photo->create();
+    //print_r($_FILES['uploaded_file']);
+
+
 
     ?>
     <!-- Page Heading -->
